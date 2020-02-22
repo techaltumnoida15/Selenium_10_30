@@ -1,0 +1,130 @@
+Create Project
+
+Add Lib - TestNG, Selenium .jar
+
+Under SRC >> package
+
+Under packages >> Class(Test Case)
+
+Class >>
+
+Declare annotations(TestNG / JUnit)
+
+
+@BeforeMethod
+public void openBrowser(){
+
+
+}
+
+@Test
+public void testCase01(){
+
+
+}
+
+@AfterMethod
+public void closeBrowser(){
+
+
+
+}
+=========================
+For IE only
+
+1. Zoom level must be 100%
+2. Protected mode setting must be same for all options
+
+========================================================
+
+Relative Xpath:
+
+1.
+//HTML-TAG[@att='value']
+
+//span[@class='searchTextSpan']
+
+2. Navigate to next child - "/"
+
+//div[@id='searchMessageContainer']
+
+
+//button[@class='searchformButton col-xs-4 rippleGrey']
+
+//div[@class='mTxt']   - Tools
+
+3.
+If there are more then one elements of same xpath
+
+//div[@class='mTxt'] 
+
+(//div[@class='mTxt'])[4]
+
+OR
+
+//descendant::HTML-TAG[@att='val']
+
+//descendant::div[@class='mTxt'][4]
+
+4. 
+
+//HTML-TAG[text()='textValue']
+
+//div[text()='More']
+
+5. 
+contains, starts-with
+
+//HTML-TAG[contains(@att,'value')]
+
+//a[contains(@data-ga-track,'Main Navigation More')]
+
+//a[@data-ga-track='Main Navigation More|More Icon']
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
