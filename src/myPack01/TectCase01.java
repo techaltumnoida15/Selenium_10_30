@@ -9,29 +9,12 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-public class TectCase01 {
-	//Declare WebDriver
-	
-	WebDriver driver;
-	
-	@BeforeMethod
-	public void openBrowser() {
-		//Open Browser
-		System.setProperty("webdriver.chrome.driver", "F:\\Regression\\Selenium\\Drivers\\chromeDriver_79\\chromedriver.exe");
-		driver = new ChromeDriver();
-		System.out.println("Open Browser");
-		
-		driver.manage().window().maximize();
-		System.out.println("Maximize it.");
+import basePack.BaseClass;
 
-		//Enter URL
-		//driver.get("http://www.makemytrip.com");
-		driver.navigate().to("http://www.makemytrip.com");
-		System.out.println("URL is entered.");
-	}
-	
+public class TectCase01 extends BaseClass{
 	@Test
 	public void loginTest() throws Exception{
+		driver.get("http://www.makemytrip.com");
 		//Check if user is on correct page
 		String pageTitle = driver.getTitle();
 		
@@ -70,11 +53,5 @@ public class TectCase01 {
 		}
 		
 		
-	}
-	
-	@AfterMethod
-	public void quitBrowser() {
-		//Close Browser
-		driver.quit();
 	}
 }

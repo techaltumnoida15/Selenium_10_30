@@ -85,6 +85,84 @@ contains, starts-with
 
 CSS Selector:
 
+CSS
+
+1.
+HTML-TAG[att='value'] 
+
+div[id='qsbClick']
+
+input[class='sugInp']
+
+input[class='sugInp w135']
+      
+
+2.if ID is given in HTML code
+
+HTML-TAG#ID
+div#qsbClick
+
+#ID
+#qsbClick
+
+3. If CLASS is given in HTML code
+
+HTML-TAG.CLASS
+input.sugInp
+
+input.sugInp w135      [x]
+
+input.sugInp.w135 
+
+.CLASS
+.sugInp
+=================================
+IMP:
+
+If there is space in CLASS/ID then fillup it with a ".", Only in case of formula 2 and 3
+
+=================================
+
+Startwith
+
+button[class='qsbSrch blueBtn']
+
+button[class^='qsbSrch']
+
+------------------
+
+EndsWith
+
+button[class$='blueBtn']
+
+------------------
+
+matching anywhere
+
+button[class*='bSrch blueB']
+
+
+*** Navigate to next child - "/"   : IN XPATH ; " " in CSS
+
+//div[@class='sWrap lftBrd sOpen']
+
+//div[@class='sWrap lftBrd sOpen']/div[2]/input
+
+With CSS:
+
+div[class='sWrap lftBrd sOpen']
+
+div[class='sWrap lftBrd sOpen'] div + div
+
+=======================
+
+difference between protected and default
+
+
+
+
+
+
 
 
 
