@@ -1,0 +1,7 @@
+Go to snapdeal.com
+
+Mouse over - SignIn
+
+Click on Login
+
+Enter mobile number in Login Popup

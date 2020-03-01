@@ -2,24 +2,24 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="19598" started-at="2020-02-29T12:29:15 IST" finished-at="2020-02-29T12:29:35 IST">
+  <suite name="Default suite" duration-ms="22484" started-at="2020-03-01T12:08:26 IST" finished-at="2020-03-01T12:08:49 IST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="19598" started-at="2020-02-29T12:29:15 IST" finished-at="2020-02-29T12:29:35 IST">
-      <class name="org.techAltum.com.TC03">
-        <test-method status="PASS" signature="openBrowser()[pri:0, instance:org.techAltum.com.TC03@6eceb130]" name="openBrowser" is-config="true" duration-ms="10594" started-at="2020-02-29T12:29:16 IST" finished-at="2020-02-29T12:29:26 IST">
+    <test name="Default test" duration-ms="22484" started-at="2020-03-01T12:08:26 IST" finished-at="2020-03-01T12:08:49 IST">
+      <class name="org.techAltum.com.TC06">
+        <test-method status="PASS" signature="openBrowser()[pri:0, instance:org.techAltum.com.TC06@6eceb130]" name="openBrowser" is-config="true" duration-ms="10478" started-at="2020-03-01T12:08:26 IST" finished-at="2020-03-01T12:08:37 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openBrowser -->
-        <test-method status="PASS" signature="testCase03()[pri:0, instance:org.techAltum.com.TC03@6eceb130]" name="testCase03" duration-ms="8932" started-at="2020-02-29T12:29:26 IST" finished-at="2020-02-29T12:29:35 IST">
+        <test-method status="PASS" signature="testCase04()[pri:0, instance:org.techAltum.com.TC06@6eceb130]" name="testCase04" duration-ms="11976" started-at="2020-03-01T12:08:37 IST" finished-at="2020-03-01T12:08:49 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testCase03 -->
-        <test-method status="PASS" signature="quitBrowser()[pri:0, instance:org.techAltum.com.TC03@6eceb130]" name="quitBrowser" is-config="true" duration-ms="0" started-at="2020-02-29T12:29:35 IST" finished-at="2020-02-29T12:29:35 IST">
+        </test-method> <!-- testCase04 -->
+        <test-method status="PASS" signature="quitBrowser()[pri:0, instance:org.techAltum.com.TC06@6eceb130]" name="quitBrowser" is-config="true" duration-ms="0" started-at="2020-03-01T12:08:49 IST" finished-at="2020-03-01T12:08:49 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quitBrowser -->
-      </class> <!-- org.techAltum.com.TC03 -->
+      </class> <!-- org.techAltum.com.TC06 -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
