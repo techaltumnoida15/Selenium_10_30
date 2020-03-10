@@ -3,13 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="org.techAltum.com.TC06">
+      <class name="basePack.TC05">
         <methods>
           <include name="openBrowser"/>
+          <include name="testCase05"/>
           <include name="quitBrowser"/>
-          <include name="testCase04"/>
         </methods>
-      </class> <!-- org.techAltum.com.TC06 -->
+      </class> <!-- basePack.TC05 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
