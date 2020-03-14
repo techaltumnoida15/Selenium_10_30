@@ -37,5 +37,10 @@ public class TC02 extends BaseClass{
 		String totalItemsText = totalItems.getText();
 		System.out.println(totalItemsText);
 		
+		//To switch iframe
+		driver.switchTo().frame(driver.findElement(By.xpath("//iframe[@id='loginIframe']")));
+		
+		//To come back to noraml content of page
+		driver.switchTo().defaultContent();
 	}
 }
