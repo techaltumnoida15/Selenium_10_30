@@ -2,24 +2,24 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="28626" started-at="2020-03-14T11:51:54 IST" finished-at="2020-03-14T11:52:23 IST">
+  <suite name="Default suite" duration-ms="21886" started-at="2020-03-15T12:07:36 IST" finished-at="2020-03-15T12:07:58 IST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="28626" started-at="2020-03-14T11:51:54 IST" finished-at="2020-03-14T11:52:23 IST">
-      <class name="javaP.MouseOver">
-        <test-method status="PASS" signature="openBrowser()[pri:0, instance:javaP.MouseOver@6eceb130]" name="openBrowser" is-config="true" duration-ms="13545" started-at="2020-03-14T11:51:54 IST" finished-at="2020-03-14T11:52:08 IST">
+    <test name="Default test" duration-ms="21886" started-at="2020-03-15T12:07:36 IST" finished-at="2020-03-15T12:07:58 IST">
+      <class name="javaP.BrokenLinks">
+        <test-method status="PASS" signature="openBrowser()[pri:0, instance:javaP.BrokenLinks@6eceb130]" name="openBrowser" is-config="true" duration-ms="11149" started-at="2020-03-15T12:07:36 IST" finished-at="2020-03-15T12:07:47 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openBrowser -->
-        <test-method status="PASS" signature="mouseOverTest()[pri:0, instance:javaP.MouseOver@6eceb130]" name="mouseOverTest" duration-ms="15038" started-at="2020-03-14T11:52:08 IST" finished-at="2020-03-14T11:52:23 IST">
+        <test-method status="PASS" signature="handleMultipleBrowserWindows()[pri:0, instance:javaP.BrokenLinks@6eceb130]" name="handleMultipleBrowserWindows" duration-ms="9955" started-at="2020-03-15T12:07:47 IST" finished-at="2020-03-15T12:07:57 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- mouseOverTest -->
-        <test-method status="PASS" signature="quitBrowser()[pri:0, instance:javaP.MouseOver@6eceb130]" name="quitBrowser" is-config="true" duration-ms="1" started-at="2020-03-14T11:52:23 IST" finished-at="2020-03-14T11:52:23 IST">
+        </test-method> <!-- handleMultipleBrowserWindows -->
+        <test-method status="PASS" signature="quitBrowser()[pri:0, instance:javaP.BrokenLinks@6eceb130]" name="quitBrowser" is-config="true" duration-ms="751" started-at="2020-03-15T12:07:57 IST" finished-at="2020-03-15T12:07:58 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quitBrowser -->
-      </class> <!-- javaP.MouseOver -->
+      </class> <!-- javaP.BrokenLinks -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
