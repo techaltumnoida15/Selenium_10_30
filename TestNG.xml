@@ -1,0 +1,20 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+  
+<suite name="Google Project" verbose="1" >
+  
+  <test name="Test Page Title" >
+    <classes>
+       <class name="testngEx.TC01" />
+    </classes>
+  </test>
+  
+  
+  
+  <test name="Test Page URL" >
+    <classes>
+       <class name="testngEx.TC02" />
+    </classes>
+  </test>
+ 
+ 
+</suite>

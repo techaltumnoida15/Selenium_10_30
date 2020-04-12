@@ -1,25 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="1" total="2" passed="1">
   <reporter-output>
+    <line>
+      <![CDATA[Page title is = https://www.google.com/?gws_rd=ssl]]>
+    </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="21886" started-at="2020-03-15T12:07:36 IST" finished-at="2020-03-15T12:07:58 IST">
+  <suite name="Google Project" duration-ms="16324" started-at="2020-04-12T13:44:11 IST" finished-at="2020-04-12T13:44:27 IST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="21886" started-at="2020-03-15T12:07:36 IST" finished-at="2020-03-15T12:07:58 IST">
-      <class name="javaP.BrokenLinks">
-        <test-method status="PASS" signature="openBrowser()[pri:0, instance:javaP.BrokenLinks@6eceb130]" name="openBrowser" is-config="true" duration-ms="11149" started-at="2020-03-15T12:07:36 IST" finished-at="2020-03-15T12:07:47 IST">
+    <test name="Test Page Title" duration-ms="13" started-at="2020-04-12T13:44:11 IST" finished-at="2020-04-12T13:44:11 IST">
+    </test> <!-- Test Page Title -->
+    <test name="Test Page URL" duration-ms="16279" started-at="2020-04-12T13:44:11 IST" finished-at="2020-04-12T13:44:27 IST">
+      <class name="testngEx.TC02">
+        <test-method status="PASS" signature="openBrowser()[pri:0, instance:testngEx.TC02@6fb0d3ed]" name="openBrowser" is-config="true" duration-ms="15540" started-at="2020-04-12T13:44:11 IST" finished-at="2020-04-12T13:44:26 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openBrowser -->
-        <test-method status="PASS" signature="handleMultipleBrowserWindows()[pri:0, instance:javaP.BrokenLinks@6eceb130]" name="handleMultipleBrowserWindows" duration-ms="9955" started-at="2020-03-15T12:07:47 IST" finished-at="2020-03-15T12:07:57 IST">
+        <test-method status="PASS" signature="test02()[pri:0, instance:testngEx.TC02@6fb0d3ed]" name="test02" duration-ms="15" started-at="2020-04-12T13:44:26 IST" finished-at="2020-04-12T13:44:26 IST">
+          <reporter-output>
+            <line>
+              <![CDATA[Page title is = https://www.google.com/?gws_rd=ssl]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- test02 -->
+        <test-method status="PASS" signature="closeBroswer()[pri:0, instance:testngEx.TC02@6fb0d3ed]" name="closeBroswer" is-config="true" duration-ms="693" started-at="2020-04-12T13:44:26 IST" finished-at="2020-04-12T13:44:27 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- handleMultipleBrowserWindows -->
-        <test-method status="PASS" signature="quitBrowser()[pri:0, instance:javaP.BrokenLinks@6eceb130]" name="quitBrowser" is-config="true" duration-ms="751" started-at="2020-03-15T12:07:57 IST" finished-at="2020-03-15T12:07:58 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- quitBrowser -->
-      </class> <!-- javaP.BrokenLinks -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+        </test-method> <!-- closeBroswer -->
+      </class> <!-- testngEx.TC02 -->
+    </test> <!-- Test Page URL -->
+  </suite> <!-- Google Project -->
 </testng-results>
