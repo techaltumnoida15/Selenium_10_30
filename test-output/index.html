@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-Google_Project">
-              <span class="suite-name border-passed">Google Project</span>
+              <span class="suite-name border-failed">Google Project</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -54,7 +54,7 @@
                 </li>
                 <li>
                   <a href="#" class="navigator-link " panel-name="testlist-Google_Project">
-                    <span class="test-stats">2 tests</span>
+                    <span class="test-stats">3 tests</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -91,7 +91,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">3 methods, 1 failed,   2 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Google_Project" class="hide-methods failed suite-Google_Project"> (hide)</a> <!-- hide-methods failed suite-Google_Project -->
+                      <a href="#" panel-name="suite-Google_Project" class="show-methods failed suite-Google_Project"> (show)</a> <!-- show-methods failed suite-Google_Project -->
+                    </span>
+                    <div class="method-list-content failed suite-Google_Project">
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Google_Project" title="testngEx.TC02" hash-for-method="test02">test02</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Google_Project -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -102,7 +116,12 @@
                     <div class="method-list-content passed suite-Google_Project">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Google_Project" title="testngEx.TC02" hash-for-method="test02">test02</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Google_Project" title="testngEx.TC01" hash-for-method="test01">test01</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Google_Project" title="testngEx.TC03" hash-for-method="test01">test01</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Google_Project -->
@@ -117,9 +136,9 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Google_Project" class="panel Google_Project">
-          <div class="suite-Google_Project-class-passed">
+          <div class="suite-Google_Project-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
+              <img src="failed.png"/>
               <span class="class-name">testngEx.TC02</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -128,6 +147,45 @@
                   <a name="test02">
                   </a> <!-- test02 -->
                   <span class="method-name">test02</span>
+                  <div class="stack-trace">java.lang.AssertionError: did not expect to find [true] but found [false]
+	at testngEx.TC02.test02(TC02.java:20)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+... Removed 22 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Google_Project-class-failed -->
+          <div class="suite-Google_Project-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testngEx.TC03</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="test01">
+                  </a> <!-- test01 -->
+                  <span class="method-name">test01</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Google_Project-class-passed -->
+          <div class="suite-Google_Project-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testngEx.TC01</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="test01">
+                  </a> <!-- test01 -->
+                  <span class="method-name">test01</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -141,17 +199,25 @@
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
-&lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Google Project&quot;&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;Test Page Title&quot;&gt;
+&lt;suite thread-count=&quot;3&quot; guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Google Project&quot; parallel=&quot;tests&quot;&gt;
+  &lt;test thread-count=&quot;3&quot; name=&quot;Test Page Title&quot; parallel=&quot;tests&quot;&gt;
+    &lt;parameter name=&quot;browser&quot; value=&quot;Firefox&quot;/&gt;
     &lt;classes&gt;
       &lt;class name=&quot;testngEx.TC01&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Test Page Title --&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;Test Page URL&quot;&gt;
+  &lt;test thread-count=&quot;3&quot; name=&quot;Test Page URL&quot; parallel=&quot;tests&quot;&gt;
+    &lt;parameter name=&quot;browser&quot; value=&quot;firefox&quot;/&gt;
     &lt;classes&gt;
       &lt;class name=&quot;testngEx.TC02&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Test Page URL --&gt;
+  &lt;test thread-count=&quot;3&quot; name=&quot;Selemct Date From Cal&quot; parallel=&quot;tests&quot;&gt;
+    &lt;parameter name=&quot;browser&quot; value=&quot;firefox&quot;/&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;testngEx.TC03&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Selemct Date From Cal --&gt;
 &lt;/suite&gt; &lt;!-- Google Project --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -167,6 +233,9 @@
               </li>
               <li>
                 <span class="test-name">Test Page URL (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">Selemct Date From Cal (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -192,16 +261,24 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(3);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'test02')
-data.setCell(0, 2, 'testngEx.TC02')
-data.setCell(0, 3, 15);
+data.setCell(0, 1, 'test01')
+data.setCell(0, 2, 'testngEx.TC03')
+data.setCell(0, 3, 2315);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'test02')
+data.setCell(1, 2, 'testngEx.TC02')
+data.setCell(1, 3, 62);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'test01')
+data.setCell(2, 2, 'testngEx.TC01')
+data.setCell(2, 3, 25);
 window.suiteTableData['Google_Project']= { tableData: data, tableDiv: 'times-div-Google_Project'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 15 ms</span>
+              <span class="suite-total-time">Total running time: 53 seconds</span>
               <div id="times-div-Google_Project">
               </div> <!-- times-div-Google_Project -->
             </div> <!-- times-div -->
@@ -213,25 +290,24 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="reporter-method-div">
+              <span class="reporter-method-name">test01</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">Page title is = Cheap Airline Tickets, Hotels & Car Rentals | CheapOair</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
               <span class="reporter-method-name">test02</span>
               <div class="reporter-method-output-div">
-                <span class="reporter-method-output">Page title is = https://www.google.com/?gws_rd=ssl</span>
+                <span class="reporter-method-output">Page title is = https://www.cheapoair.com/</span>
               </div> <!-- reporter-method-output-div -->
             </div> <!-- reporter-method-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Google_Project" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">1 ignored method</span>
+            <span class="header-content">0 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
-            <div class="ignored-class-div">
-              <span class="ignored-class-name">testngEx.TC01</span>
-              <div class="ignored-methods-div">
-                <span class="ignored-method-name">test01</span>
-                <br/>
-              </div> <!-- ignored-methods-div -->
-            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-Google_Project" class="panel">
@@ -240,19 +316,63 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">testngEx.TC02</div> <!-- chronological-class-name -->
-              <div class="configuration-class before">
-                <span class="method-name">openBrowser</span>
+              <div class="chronological-class-name">testngEx.TC01</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">openBrowser(Firefox)</span>
                 <span class="method-start">0 ms</span>
-              </div> <!-- configuration-class before -->
+              </div> <!-- configuration-method before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testngEx.TC03</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">openBrowser(firefox)</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-method before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testngEx.TC02</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">openBrowser(firefox)</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-method before -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">test02</span>
-                <span class="method-start">15547 ms</span>
+                <span class="method-start">25356 ms</span>
               </div> <!-- test-method -->
-              <div class="configuration-class after">
-                <span class="method-name">closeBroswer</span>
-                <span class="method-start">15565 ms</span>
-              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testngEx.TC01</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">test01</span>
+                <span class="method-start">25446 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testngEx.TC02</div> <!-- chronological-class-name -->
+              <div class="configuration-method after">
+                <span class="method-name">closeBroswer([TestResult name=test02 status=FAILURE method=TC02.test02()[pri:0, instance:testngEx.TC02@24b1d79b] ...)</span>
+                <span class="method-start">25467 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testngEx.TC01</div> <!-- chronological-class-name -->
+              <div class="configuration-method after">
+                <span class="method-name">closeBroswer([TestResult name=test01 status=SUCCESS method=TC01.test01()[pri:0, instance:testngEx.TC01@5c072e3f] ...)</span>
+                <span class="method-start">25481 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testngEx.TC03</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">test01</span>
+                <span class="method-start">30727 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">closeBroswer([TestResult name=test01 status=SUCCESS method=TC03.test01()[pri:0, instance:testngEx.TC03@4ae82894] ...)</span>
+                <span class="method-start">33044 ms</span>
+              </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->

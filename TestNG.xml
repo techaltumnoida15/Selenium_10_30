@@ -1,18 +1,29 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
   
-<suite name="Google Project" verbose="1" >
-  
+<suite name="Google Project" parallel="tests" thread-count="3" verbose="1" >
+<!-- <parameter name="browser" value="Firefox"></parameter> -->
+
+
   <test name="Test Page Title" >
+  <parameter name="browser" value="Firefox"></parameter>
     <classes>
        <class name="testngEx.TC01" />
     </classes>
   </test>
   
   
-  
   <test name="Test Page URL" >
+  <parameter name="browser" value="firefox"></parameter>
     <classes>
        <class name="testngEx.TC02" />
+    </classes>
+  </test>
+  
+  
+  <test name="Selemct Date From Cal" >
+  <parameter name="browser" value="firefox"></parameter>
+    <classes>
+       <class name="testngEx.TC03" />
     </classes>
   </test>
  
